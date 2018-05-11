@@ -1,0 +1,86 @@
+body{
+    background: url("../images/BI-10.JPG")
+}
+
+#header{
+    color: white;
+    background: orange;
+}
+
+#instructions{
+    position: relative;
+    padding: 30px;
+    background: beige;
+    color: green;
+    font-weight: bold;
+    height: 200px;
+    width: 300px;
+}
+
+#score-1{
+    background: lightgreen;
+    padding: 30px;
+    width: 10%;
+    height: 100px;
+}
+
+#scorekeeper{
+    background: lightblue;
+    width: 150px;
+    height: 100px;
+    padding:30px;
+    color: green;
+    position: relative;
+    left: 200px;
+    bottom: 180px;
+}
+
+.crystals{
+    position: relative;
+    bottom: 150px;
+}
+#RC{
+    padding:1px;
+    border:1px solid #021a40;
+    background-color:red;
+    height: 150px;
+    width: 150px;
+}
+
+#BC{
+   padding:1px;
+   border:1px solid #021a40;
+   background-color: blue;
+   height: 150px;
+   width: 150px;
+}
+#GC{
+    height: 150px;
+    width: 150px;
+}
+
+#YC{
+    padding:1px;
+    border:1px solid #021a40;
+    background-color: yellow;
+    height: 150px;
+    width: 150px;
+}
+
+#scorecard-1{
+    background: #4aaaaf;
+    width: 50%;
+    height: 30px;
+    color: white;
+    position: relative;
+    bottom: 150px;
+  }
+
+  #scorecard-2{
+    background: lightseagreen;
+    width: 50%;
+    height: 300px;
+    color: white;
+    position: relative;
+    bottom: 150px;
+  }
