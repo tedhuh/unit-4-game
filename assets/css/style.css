@@ -1,7 +1,7 @@
 body{
-    background: url("../images/BI-10.JPG")
-}
-
+    background: url("../images/BI-10.JPG");
+    font-family: Arial Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Helvetica, sans-serif;
+} 
 #header{
     color: white;
     background: orange;

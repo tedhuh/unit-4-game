@@ -1,5 +1,15 @@
 //Well first I need to add crystals in order to start the game. 
 
+function setUpGame(){    
+    totalScore = 0;
+    randomScore = Math.floor(Math.random() * 120 + 19);
+    $("#score-1").html('Random Result: '   +randomScore);
+    redCrystal = Math.floor(Math.random() * 5);
+    blueCrystal = Math.floor(Math.random() * 10);
+    yellowCrystal = Math.floor(Math.random() * 15);
+    greenCrystal = Math.floor(Math.random() * 20);
+}
+
 var wins = 0;
 var losses = 0;
 var totalScore = 0;
@@ -9,18 +19,12 @@ var blueCrystal;
 var yellowCrystal;
 var greenCrystal;
 var gameOver = false;
+setUpGame();
 
 
-
-//Crystals onclick to generate random numbers.
-randomScore = Math.floor(Math.random() * 120 + 19);
-console.log(randomScore);
-
-$("#score-1").html('Random Result: '   +randomScore);
 
 //now I need to add the random Score into all the crystals 
 
-redCrystal = Math.floor(Math.random() * 5);
 $("#RC").on("click", function(){
     totalScore = redCrystal + totalScore;
     console.log(totalScore + 'RC');
@@ -29,15 +33,18 @@ $("#RC").on("click", function(){
     if(randomScore === totalScore){
         wins++;
         $("#wins").text("wins: " + wins);
+        setUpGame();
     }   else if(totalScore > randomScore){
         losses++;
         $("#losses").text("losses: " + losses);
+        setUpGame();
+
     };
 
-    
+        
 });
 
-blueCrystal = Math.floor(Math.random() * 10);
+
 
 $("#BC").on("click", function(){
     totalScore = blueCrystal + totalScore;
@@ -47,14 +54,19 @@ $("#BC").on("click", function(){
     if(randomScore === totalScore){
         wins++;
         $("#wins").text("wins: " + wins);
+        setUpGame();
     }   else if(totalScore > randomScore){
         losses++;
         $("#losses").text("losses: " + losses);
+        totalScore = 0
+        $("#losses").text("losses: " + losses);
+        setUpGame();
+
     };
 
 });
 
-yellowCrystal = Math.floor(Math.random() * 15);
+
 
 $("#YC").on("click", function(){
     totalScore = yellowCrystal + totalScore;
@@ -64,13 +76,16 @@ $("#YC").on("click", function(){
     if(randomScore === totalScore){
         wins++;
         $("#wins").text("wins: " + wins);
+        setUpGame();
     }   else if(totalScore > randomScore){
         losses++;
         $("#losses").text("losses: " + losses);
+        setUpGame();
+
     };
 });
 
-greenCrystal = Math.floor(Math.random() * 20);
+
 
 $("#GC").on("click", function(){
     totalScore = greenCrystal + totalScore;
@@ -80,24 +95,28 @@ $("#GC").on("click", function(){
     if(randomScore === totalScore){
         wins++;
         $("#wins").text("wins: " + wins);
+        setUpGame();
     }   else if(totalScore > randomScore){
         losses++;
         $("#losses").text("losses: " + losses);
+        setUpGame();
+
     };
 
 });
 
 //GAME RESET
+//when random randomResult=totalScore, randomResult needs to change to a different number and totalScore needs to get set to 0;
+//when 
 
-function reset(){
-    if(randomResult === wins){
-        randomResult = 0; 
-    }
-};
+//maybe make a gameOver function?
 
-reset();
+
 
 //reset function
+
+
+//when win is reached i want my totalScore and randomScore to be put to zero 
 
 
 
